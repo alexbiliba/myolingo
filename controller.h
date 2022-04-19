@@ -11,9 +11,12 @@ class Controller : public {
  public:
   Controller();
 
+  void SetView(std::unique_ptr<View>&& view);
+  void SetModel(std::unique_ptr<Model>&& model);
+
  private:
-  std::unique_ptr<View> view_;
-  std::unique_ptr<Model> model_;
+  std::unique_ptr<View> view_ = nullptr;
+  std::unique_ptr<Model> model_ = nullptr;
 };
 
 #endif  // CONTROLLER_H_
