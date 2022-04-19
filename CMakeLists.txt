@@ -14,7 +14,9 @@ find_package(Qt5 COMPONENTS
 
 add_executable(myolingo
         main.cpp
-        view.cpp)
+        model.cpp
+        view.cpp
+        )
 
 target_link_libraries(myolingo
         Qt5::Core
