@@ -16,7 +16,9 @@ add_executable(myolingo
         main.cpp
         model.cpp
         view.cpp
+        abstract_controller.cpp
         controller.cpp
+        app.cpp
         )
 
 target_link_libraries(myolingo
