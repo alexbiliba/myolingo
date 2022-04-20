@@ -8,12 +8,14 @@
 
 class App {
  public:
-  App();
+  App(std::unique_ptr<Model>&& model,
+      std::unique_ptr<View>&& view,
+      std::shared_ptr<Controller>&& controller);
 
   void Run();
 
  private:
-  std::unique_ptr<Controller> m_controller_;
+  std::shared_ptr<Controller> controller_;
 };
 
 #endif  // APP_H_

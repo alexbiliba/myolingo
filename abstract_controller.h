@@ -6,7 +6,7 @@
 class AbstractController : public QObject {
   Q_OBJECT
  public:
-
+  AbstractController();
 };
 
 #endif  // ABSTRACT_CONTROLLER_H_

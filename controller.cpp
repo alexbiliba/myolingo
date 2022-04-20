@@ -14,3 +14,7 @@ void Controller::SetView(std::unique_ptr<View>&& view) {
   assert(view != nullptr);
   view_ = std::move(view);
 }
+
+const std::unique_ptr<View>& Controller::GetView() const {
+  return view_;
+}
