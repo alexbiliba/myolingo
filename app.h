@@ -8,7 +8,7 @@
 
 class App {
  public:
-  App(std::unique_ptr<Model>&& model,
+  App(std::shared_ptr<Model>&& model,
       std::unique_ptr<View>&& view,
       std::shared_ptr<Controller>&& controller);
 

@@ -22,6 +22,7 @@ add_executable(myolingo
         Tasks/abstract_task.cpp
         Tasks/pick_an_option_task.cpp
         constants.h
+        menu.cpp
         )
 
 target_link_libraries(myolingo

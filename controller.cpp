@@ -5,7 +5,7 @@
 Controller::Controller() {
 }
 
-void Controller::SetModel(std::unique_ptr<Model>&& model) {
+void Controller::SetModel(std::shared_ptr<Model>&& model) {
   assert(model != nullptr);
   model_ = std::move(model);
 }
@@ -17,4 +17,8 @@ void Controller::SetView(std::unique_ptr<View>&& view) {
 
 const std::unique_ptr<View>& Controller::GetView() const {
   return view_;
+}
+
+Model* Controller::GetModel() const {
+  return model_.get();
 }
