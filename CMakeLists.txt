@@ -19,6 +19,9 @@ add_executable(myolingo
         abstract_controller.cpp
         controller.cpp
         app.cpp
+        Tasks/abstract_task.cpp
+        Tasks/pick_an_option_task.cpp
+        constants.h
         )
 
 target_link_libraries(myolingo

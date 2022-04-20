@@ -6,7 +6,7 @@
 View::View() : main_layout_(new QBoxLayout(
                    QBoxLayout::Direction::TopToBottom, this)) {
   std::cerr << "View was created\n";
-  main_layout_->addWidget(new QPushButton("example_button"));
+
 }
 
 void View::SetController(

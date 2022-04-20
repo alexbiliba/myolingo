@@ -3,12 +3,10 @@
 
 #include <memory>
 #include <QBoxLayout>
-#include <QGroupBox>
-#include <QMainWindow>
-#include <QPushButton>
 #include <QWidget>
 
 #include "abstract_controller.h"
+#include "Tasks/pick_an_option_task.h"
 
 class View : public QWidget {
   Q_OBJECT
