@@ -15,8 +15,14 @@ class View : public QWidget {
 
   void SetController(const std::shared_ptr<AbstractController>& controller);
 
+ public slots:
+  void OpenMenu();
+
  private:
-  QBoxLayout* main_layout_;
+  void ClearLayout() const;
+
+  QBoxLayout* layout_;
+  Menu* main_menu_;
   std::shared_ptr<AbstractController> controller_;
 };
 

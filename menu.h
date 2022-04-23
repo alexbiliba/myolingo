@@ -6,10 +6,9 @@
 #include <QPushButton>
 
 class Menu : public QWidget {
+  Q_OBJECT
  public:
   Menu();
-
-  QBoxLayout* GetLayout() const;
 
  private:
   QBoxLayout* layout_;
