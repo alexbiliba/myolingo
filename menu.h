@@ -1,0 +1,32 @@
+#ifndef MENU_H_
+#define MENU_H_
+
+#include <QBoxLayout>
+#include <QLabel>
+#include <QPainter>
+#include <QPushButton>
+#include <QWidget>
+
+#include "scores.h"
+
+class Menu : public QWidget {
+  Q_OBJECT
+ public:
+  Menu();
+
+  void ChangeScores(int scores);
+
+  QPushButton* GetPickAnOption() const;
+  Scores* GetScoresWidget();
+
+ private:
+  QBoxLayout* layout_;
+
+  Scores* scores_widget_;
+
+  QPushButton* pick_an_option_;
+  QPushButton* input_answer_;
+  QPushButton* audio_;
+};
+
+#endif  // MENU_H_
