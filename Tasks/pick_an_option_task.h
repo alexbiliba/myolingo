@@ -9,6 +9,7 @@
 #include "abstract_task.h"
 
 class PickAnOptionTask : public AbstractTask {
+  Q_OBJECT
  public:
   PickAnOptionTask();
 
@@ -21,23 +22,22 @@ class PickAnOptionTask : public AbstractTask {
   void AddNewAnswer(const std::string& answer);
   const std::vector<std::string>& GetAnswers() const;
 
-  void SetAttemptsWidget(int attempts);
+  bool CheckAnswer() override;
+
+  void GroupWidgetsInLayout() override;
 
  signals:
-  void AttemptWasUsed();
-  void TaskFailed();
-
  public slots:
 
  private:
   std::string question_;
   std::string correct_answer_;
-  std::vector<std::string> answera_str_;
+  std::vector<std::string> answers_str_;
 
-  QPushButton* ready_;
+  QBoxLayout* layout_;
+  QLabel* question_label_;
   QButtonGroup* answers_group_;
-
-  QLabel* attempts_;
+  std::vector<QCheckBox*> answers_vector_;
 
 };
 

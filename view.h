@@ -28,6 +28,8 @@ class View : public QWidget {
   void ResetScores(QAction* action);
   void AddScores(int scores);
 
+  void ExitTask();
+
  private:
   void CreateConnections();
   void ClearLayout();

@@ -2,11 +2,16 @@
 
 #include "../constants.h"
 
-AbstractTask::AbstractTask() : layout_(new QGridLayout()) {
-  is_ready_ = false;
-  is_correct_answer_ = false;
-}
+AbstractTask::AbstractTask() : layout_(
+    new QBoxLayout(QBoxLayout::Direction::TopToBottom)) {}
 
-const QGridLayout* AbstractTask::GetLayout() const {
+const QBoxLayout* AbstractTask::GetLayout() const {
   return layout_;
 }
+
+bool AbstractTask::CheckAnswer() {
+  return false;
+}
+
+void AbstractTask::GroupWidgetsInLayout() {}
+

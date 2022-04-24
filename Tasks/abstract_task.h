@@ -1,19 +1,22 @@
 #ifndef ABSTRACT_TASK_H_
 #define ABSTRACT_TASK_H_
 
-#include <QGridLayout>
+#include <QBoxLayout>
+#include <QWidget>
 
-class AbstractTask {
+class AbstractTask : public QWidget {
+  Q_OBJECT
  public:
   AbstractTask();
 
-  const QGridLayout* GetLayout() const;
+  const QBoxLayout* GetLayout() const;
+
+  virtual bool CheckAnswer();
+
+  virtual void GroupWidgetsInLayout();
 
  protected:
-  QGridLayout* layout_;
-
-  bool is_ready_;
-  bool is_correct_answer_;
+  QBoxLayout* layout_;
 };
 
 #endif  // ABSTRACT_TASK_H_

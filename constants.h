@@ -2,7 +2,7 @@
 #define CONSTANTS_H_
 
 namespace constants {
-  const int attempts_count = 4;
+  const int attempts_count = 3;
 }
 
 #endif  // CONSTANTS_H_
