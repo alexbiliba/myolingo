@@ -7,7 +7,10 @@ View::View() : layout_(new QBoxLayout(QBoxLayout::Direction::TopToBottom,
                                       this)),
                main_menu_(new Menu) {
   std::cerr << "View was created\n";
-  layout_->addWidget(new QPushButton("afa"));
+}
+
+void View::RunView() {
+  show();
   OpenMenu();
 }
 
@@ -19,6 +22,7 @@ void View::SetController(
 
 void View::OpenMenu() {
   ClearLayout();
+  main_menu_->ChangeScores(controller_->GetModel()->GetScores());
   layout_->addWidget(main_menu_);
 }
 

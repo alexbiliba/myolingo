@@ -2,12 +2,11 @@
 
 #include <utility>
 
-Controller::Controller() {
-}
+Controller::Controller() {}
 
-void Controller::SetModel(std::shared_ptr<Model>&& model) {
+void Controller::SetModel(const std::shared_ptr<Model>& model) {
   assert(model != nullptr);
-  model_ = std::move(model);
+  model_ = model;
 }
 
 void Controller::SetView(std::unique_ptr<View>&& view) {

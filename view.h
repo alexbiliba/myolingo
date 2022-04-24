@@ -13,6 +13,8 @@ class View : public QWidget {
  public:
   View();
 
+  void RunView();
+
   void SetController(const std::shared_ptr<AbstractController>& controller);
 
  public slots:

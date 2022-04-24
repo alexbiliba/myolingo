@@ -9,7 +9,7 @@ class Controller : public AbstractController {
   Controller();
 
   void SetView(std::unique_ptr<View>&& view);
-  void SetModel(std::shared_ptr<Model>&& model);
+  void SetModel(const std::shared_ptr<Model>& model);
 
   const std::unique_ptr<View>& GetView() const;
 
