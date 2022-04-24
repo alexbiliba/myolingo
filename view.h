@@ -7,6 +7,7 @@
 #include <QWidget>
 
 #include "abstract_controller.h"
+#include "menu.h"
 #include "Tasks/pick_an_option_task.h"
 #include "Tasks/task_widget.h"
 
@@ -20,14 +21,17 @@ class View : public QWidget {
   void SetController(const std::shared_ptr<AbstractController>& controller);
 
   void paintEvent(QPaintEvent* event) override;
-  void FillBGInWhite();
 
  public slots:
   void OpenMenu();
   void OpenPickAnOption();
+  void ResetScores(QAction* action);
+  void AddScores(int scores);
 
  private:
+  void CreateConnections();
   void ClearLayout();
+  void UpdateScores();
 
   QBoxLayout* layout_;
   Menu* main_menu_;

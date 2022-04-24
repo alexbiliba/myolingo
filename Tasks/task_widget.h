@@ -14,7 +14,7 @@ class TaskWidget : public QWidget {
  private:
   QBoxLayout* layout_;
 
-//  QLabel* scores_label_;
+//  QLabel* scores_widget_;
 
   QPushButton* button_;
 };

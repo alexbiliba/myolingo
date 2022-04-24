@@ -20,6 +20,7 @@ add_executable(myolingo
         main.cpp
         menu.cpp
         model.cpp
+        scores.cpp
         Tasks/abstract_task.cpp
         Tasks/pick_an_option_task.cpp
         Tasks/task_widget.cpp

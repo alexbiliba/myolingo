@@ -7,6 +7,8 @@
 #include <QPushButton>
 #include <QWidget>
 
+#include "scores.h"
+
 class Menu : public QWidget {
   Q_OBJECT
  public:
@@ -15,11 +17,12 @@ class Menu : public QWidget {
   void ChangeScores(int scores);
 
   QPushButton* GetPickAnOption() const;
+  Scores* GetScoresWidget();
 
  private:
   QBoxLayout* layout_;
 
-  QLabel* scores_label_;
+  Scores* scores_widget_;
 
   QPushButton* pick_an_option_;
   QPushButton* input_answer_;
