@@ -14,3 +14,7 @@ void Model::SetScores(int scores) {
   scores_ = scores;
   settings_->setValue("Scores", scores);
 }
+
+void Model::AddScores(int scores) {
+  SetScores(scores_ + scores);
+}

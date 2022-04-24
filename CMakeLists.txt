@@ -13,16 +13,17 @@ find_package(Qt5 COMPONENTS
         REQUIRED)
 
 add_executable(myolingo
-        main.cpp
-        model.cpp
-        view.cpp
         abstract_controller.cpp
-        controller.cpp
         app.cpp
+        constants.h
+        controller.cpp
+        main.cpp
+        menu.cpp
+        model.cpp
         Tasks/abstract_task.cpp
         Tasks/pick_an_option_task.cpp
-        constants.h
-        menu.cpp
+        Tasks/task_widget.cpp
+        view.cpp
         )
 
 target_link_libraries(myolingo

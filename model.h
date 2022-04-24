@@ -11,6 +11,7 @@ class Model {
 
   int GetScores() const;
   void SetScores(int scores);
+  void AddScores(int scores);
 
  private:
   QSettings* settings_;

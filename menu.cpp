@@ -17,3 +17,7 @@ void Menu::ChangeScores(int scores) {
   scores_text += std::to_string(scores);
   scores_label_->setText(scores_text.c_str());
 }
+
+QPushButton* Menu::GetPickAnOption() const {
+  return pick_an_option_;
+}

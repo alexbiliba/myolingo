@@ -3,6 +3,7 @@
 
 #include <QBoxLayout>
 #include <QLabel>
+#include <QPainter>
 #include <QPushButton>
 #include <QWidget>
 
@@ -12,6 +13,8 @@ class Menu : public QWidget {
   Menu();
 
   void ChangeScores(int scores);
+
+  QPushButton* GetPickAnOption() const;
 
  private:
   QBoxLayout* layout_;
